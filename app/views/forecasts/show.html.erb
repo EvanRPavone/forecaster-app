@@ -1,0 +1,24 @@
+<%= render "shared/flash" %>
+
+<h1>Forecast</h1>
+
+<%= form_with(method: 'get', local: true) do %>
+    <%= label :address, "What is your address?" %><br>
+    <%= text_field_tag(:address, @address || @default_address, size: 70) %><br>
+    <%= submit_tag("Lookup") %>
+<% end %>
+
+<% if defined?(@weather) %>
+
+    <ul>
+        <li>Address: <%= @geocode.address %></li>
+        <li>County: <%= @geocode.county %></li>
+        <li>Temperature: <%= @temperature %> ℉</li>
+        <li>Temperature Minimum: <%= @temperature_min %> ℉</li>
+        <li>Temperature Maximum: <%= @temperature_max %> ℉</li>
+        <li>Humidity: <%= @weather.humidity %>%</li>
+        <li>Pressure: <%= @pressure %> inHg</li>
+        <li>Description: <%= @weather.description %></li>
+        <li>Is this result from the cache? <%= @weather_cache_exist %>
+    </ul>
+<% end %>
