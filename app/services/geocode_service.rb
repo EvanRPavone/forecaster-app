@@ -2,7 +2,6 @@ class GeocodeService
 
   def self.call(address)
     response = Geocoder.search(address)
-    puts "Geocoder: #{response}"
     response or raise IOError.new "Geocoder error"
     response.length > 0 or raise IOError.new "Geocoder is empty: #{response}"
     data = response.first.data
