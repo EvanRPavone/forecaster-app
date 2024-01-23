@@ -11,6 +11,22 @@ Forecaster is a Ruby on Rails application that provides users with up-to-date we
 - **Location-based Weather:** Obtain weather updates based on user-specified locations.
 - **Responsive Design:** A responsive and mobile-friendly design for a seamless user experience.
 
+- ** TEMPERATURE:
+  - Current Temperature
+  - Feels Like Temperature
+  - Low of Temperature
+  - High of Temperature
+
+- ** CONDITIONS:
+  - Weather Conditions
+  - Wind speed (Mph)
+  - Wind Gust (Mph)
+
+- ** Humidity & Pressure:
+  - Humidity
+  - Pressure (inHg)
+  - Wind Gust
+
 ## Installation
 
 1. Clone the repository:
