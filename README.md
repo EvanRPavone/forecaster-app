@@ -104,6 +104,7 @@ to see what the api returns put `puts data` somewhere in the function to see. Fr
   class WeatherService
       
     def self.call(latitude, longitude)
+      ...
       response = conn.get('/data/2.5/weather', {
         appid: Rails.application.credentials.openweather_api_key,
         # passes in the lat and long retrieved from GeocodeService
