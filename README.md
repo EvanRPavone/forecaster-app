@@ -45,12 +45,12 @@ Forecaster is a Ruby on Rails application that provides users with up-to-date we
 
   This application utilizes [OpenWeatherMap](https://home.openweathermap.org/api_keys) and [ArcGIS](https://developers.arcgis.com/api-keys/)
 
-  ## Get OpenWeatherMap Key
+  ### Get OpenWeatherMap Key
 
   1. Create an account
   2. In the top right, there is your name, click it and go to "My API Keys"
 
-  ## Get ArcGIS Credentials
+  ### Get ArcGIS Credentials
 
   1. Create an account and set your account as developer
   2. Go to the dashboard and there is a section called "Recent API Keys" or In the top right next to "Dashboard" there is "API keys"
