@@ -16,7 +16,7 @@
 <% end %>
 
 
-<% if defined?(@weather) %>
+<% if @weather %>
   <div class="container mt-5">
     <div class="card text-center">
       <div class="card-header">
@@ -29,15 +29,18 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Temperature</h5>
-              <p class="card-text">Current Temperature: <%= @temperature %> ℉</p>
-              <p class="card-text">Low: <%= @temperature_min %> ℉</p>
-              <p class="card-text">High: <%= @temperature_max %> ℉</p>
+              <p class="card-text">Current Temperature: <%= @weather.temperature %> ℉</p>
+              <p class="card-text">Feels Like: <%= @weather.feels_like %> ℉</p>
+              <p class="card-text">Low: <%= @weather.temperature_min %> ℉</p>
+              <p class="card-text">High: <%= @weather.temperature_max %> ℉</p>
             </div>
           </div>
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Conditions</h5>
               <p class="card-text"><%= @weather.description.titleize %></p>
+              <p class="card-text">Wind: <%= @weather.wind %> MPH</p>
+              <p class="card-text">Wind Gust: ~<%= @weather.wind_gust %> MPH</p>
             </div>
           </div>
           <div class="card">
@@ -50,8 +53,8 @@
         </div>
       </div>
       <div class="card-footer text-muted d-flex align-items-end">
-        <% if @weather_cache_exist == "true" %>
-          <span class="badge rounded-pill text-bg-success" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Results pulled from cache">✓</span>
+        <% if @weather_cache_exist %>
+          <span class='badge rounded-pill text-bg-success' data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Results pulled from cache">✓</span>
         <% else %>
           <span class="badge rounded-pill text-bg-danger" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Results not pulled from cache">✕</span>
         <% end %>
