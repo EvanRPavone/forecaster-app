@@ -173,3 +173,12 @@ to see what the api returns put `puts data` somewhere in the function to see. Fr
       
   end
 ```
+
+## RUN THE TEST
+
+```
+  rails test
+```
+```
+  rails test:system
+```
