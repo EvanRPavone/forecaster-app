@@ -27,7 +27,7 @@ Forecaster is a Ruby on Rails application that provides users with up-to-date we
   - Pressure (inHg)
   - Wind Gust
 
-![examplescreenshot](https://gyazo.com/c5c2856799497ff981697febbbde0194 "Screenshot Example")
+![examplescreenshot](https://i.gyazo.com/c5c2856799497ff981697febbbde0194.png "Screenshot Example")
 
 ## Installation
 
