@@ -43,7 +43,20 @@ Forecaster is a Ruby on Rails application that provides users with up-to-date we
 
 3. Configure API Keys
 
-  I used rails credentials to store my api keys, but you can use .env too
+  This application utilizes [OpenWeatherMap](https://home.openweathermap.org/api_keys) and [ArcGIS](https://developers.arcgis.com/api-keys/)
+
+  ## Get OpenWeatherMap Key
+
+  1. Create an account
+  2. In the top right, there is your name, click it and go to "My API Keys"
+
+  ## Get ArcGIS Credentials
+
+  1. Create an account and set your account as developer
+  2. Go to the dashboard and there is a section called "Recent API Keys" or In the top right next to "Dashboard" there is "API keys"
+  3. Your username that you signed up with is going to be your `arcgis_user` and the `arcgis_secret` is the API key you found on your dashboard
+
+  I used rails credentials to store my api keys, but you can use .env (Not Recommended) too
 
   ```
     EDITOR="code --wait"  bin/rails credentials:edit
