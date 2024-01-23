@@ -88,7 +88,12 @@ Forecaster is a Ruby on Rails application that provides users with up-to-date we
     )
   ```
 
-4. Start your rails server
+4. Enable Development Cache
+  ```
+    rails dev:cache
+  ```
+
+5. Start your rails server
 
   ```
     rails s
