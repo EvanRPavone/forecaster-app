@@ -3,7 +3,7 @@ require 'test_helper'
 class WeatherServiceTest < ActiveSupport::TestCase
 
   test "call with known parameters" do
-    # Example address is 1 Infinite Loop, Cupertino, California
+    # Example address is 1 Infinite Loop
     latitude = 37.331669
     longitude = -122.030098 
     weather = WeatherService.call(latitude, longitude)
