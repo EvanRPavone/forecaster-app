@@ -1,6 +1,6 @@
-<%= render "shared/flash" %>
 <%= form_with(method: 'get', local: true) do %>
   <div class="container mt-5">
+    <%= render "shared/flash" %>
     <div class="card">
       <h5 class="card-header">Forecast</h5>
       <div class="card-body">
@@ -40,7 +40,9 @@
               <h5 class="card-title">Conditions</h5>
               <p class="card-text"><%= @weather.description.titleize %></p>
               <p class="card-text">Wind: <%= @weather.wind %> MPH</p>
-              <p class="card-text">Wind Gust: ~<%= @weather.wind_gust %> MPH</p>
+              <% if @weather.wind_gust %>
+                <p class="card-text">Wind Gust: ~<%= @weather.wind_gust %> MPH</p>
+              <% end %>
             </div>
           </div>
           <div class="card">
